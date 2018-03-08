@@ -1,4 +1,4 @@
-package com.ws;
+package com.ws.helloworld;
 
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -14,11 +14,13 @@ public class HelloWorldController {
 		return "Hello World";
 	}
 
+
 	// Return a bean in JSON format
 	@RequestMapping(method = RequestMethod.GET, path = "/hello-world-bean")
 	private HelloWorldBean helloWorldBean() {
 		return new HelloWorldBean("Hello World Bean");
 	}
+
 
 	// Passing a variable
 	@RequestMapping(method = RequestMethod.GET, path = "/hello-world/path-variable/{name}")
